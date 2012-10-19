@@ -2643,11 +2643,6 @@ AC_DEFUN([SC_BUGGY_STRTOD], [
 		    exit(0);
 		}], tcl_cv_strtod_buggy=ok, tcl_cv_strtod_buggy=buggy,
 		    tcl_cv_strtod_buggy=buggy)])
-	if test "$tcl_cv_strtod_buggy" = buggy; then
-	    AC_LIBOBJ([fixstrtod])
-	    USE_COMPAT=1
-	    AC_DEFINE(strtod, fixstrtod, [Do we want to use the strtod() in compat?])
-	fi
     fi
 ])
 

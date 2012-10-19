@@ -9077,18 +9077,6 @@ fi
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $tcl_cv_strtod_buggy" >&5
 $as_echo "$tcl_cv_strtod_buggy" >&6; }
-	if test "$tcl_cv_strtod_buggy" = buggy; then
-	    case " $LIBOBJS " in
-  *" fixstrtod.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS fixstrtod.$ac_objext"
- ;;
-esac
-
-	    USE_COMPAT=1
-
-$as_echo "#define strtod fixstrtod" >>confdefs.h
-
-	fi
     fi
 
 
