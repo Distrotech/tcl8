@@ -569,7 +569,7 @@ objs: ${OBJS}
 
 
 ${TCL_EXE}: ${TCLSH_OBJS} ${TCL_LIB_FILE}
-	${CC} ${CFLAGS} ${LDFLAGS} ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} @EXTRA_TCLSH_LIBS@ \
+	${CC} ${CFLAGS} ${LDFLAGS} ${TCLSH_OBJS} -L./ @TCL_BUILD_LIB_SPEC@ ${LIBS} @EXTRA_TCLSH_LIBS@ \
 		${CC_SEARCH_FLAGS} -o ${TCL_EXE}
 
 # Resetting the LIB_RUNTIME_DIR below is required so that the generated
