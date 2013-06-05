@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Tcl8 by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Tcl8</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/tcl8/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/tcl8/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/tcl8" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>README:  Tcl
+    This is the Tcl 8.5.12 source distribution.
+    <a href="http://tcl.sourceforge.net/">http://tcl.sourceforge.net/</a>
+    You can get any source release of Tcl from the file distributions
+    link at the above URL.</p>
+
+<h2>
+<a name="contents" class="anchor" href="#contents"><span class="octicon octicon-link"></span></a>Contents</h2>
+
+<pre><code>1. Introduction
+2. Documentation
+3. Compiling and installing Tcl
+4. Development tools
+5. Tcl newsgroup
+6. The Tcler's Wiki
+7. Mailing lists
+8. Support and Training
+9. Tracking Development
+10. Thank You
+</code></pre>
+
+<h2>
+<a name="1-introduction" class="anchor" href="#1-introduction"><span class="octicon octicon-link"></span></a>1. Introduction</h2>
+
+<p>Tcl provides a powerful platform for creating integration applications that
+tie together diverse applications, protocols, devices, and frameworks.
+When paired with the Tk toolkit, Tcl provides the fastest and most powerful
+way to create GUI applications that run on PCs, Unix, and Mac OS X.
+Tcl can also be used for a variety of web-related tasks and for creating
+powerful command languages for applications.</p>
+
+<p>Tcl is maintained, enhanced, and distributed freely by the Tcl community.
+The home for Tcl/Tk releases and bug/patch database is on SourceForge:</p>
+
+<pre><code>http://tcl.sourceforge.net/
+</code></pre>
+
+<p>with the Tcl Developer Xchange hosted at:</p>
+
+<pre><code>http://www.tcl.tk/
+</code></pre>
+
+<p>Tcl is a freely available open source package.  You can do virtually
+anything you like with it, such as modifying it, redistributing it,
+and selling it either in whole or in part.  See the file
+"license.terms" for complete information.</p>
+
+<h2>
+<a name="2-documentation" class="anchor" href="#2-documentation"><span class="octicon octicon-link"></span></a>2. Documentation</h2>
+
+<p>Extensive documentation is available at our website.
+The home page for this release, including new features, is
+    <a href="http://www.tcl.tk/software/tcltk/8.5.html">http://www.tcl.tk/software/tcltk/8.5.html</a></p>
+
+<p>Detailed release notes can be found at the file distributions page
+by clicking on the relevant version.
+    <a href="http://sourceforge.net/projects/tcl/files/">http://sourceforge.net/projects/tcl/files/</a></p>
+
+<p>Information about Tcl itself can be found at
+    <a href="http://www.tcl.tk/about/">http://www.tcl.tk/about/</a></p>
+
+<p>There have been many Tcl books on the market.  Many are mentioned in the Wiki:
+    <a href="http://wiki.tcl.tk/_/ref?N=25206">http://wiki.tcl.tk/_/ref?N=25206</a></p>
+
+<p>To view the complete set of reference manual entries for Tcl 8.5 online,
+visit the URL:
+    <a href="http://www.tcl.tk/man/tcl8.5/">http://www.tcl.tk/man/tcl8.5/</a></p>
+
+<h2>
+<a name="2a-unix-documentation" class="anchor" href="#2a-unix-documentation"><span class="octicon octicon-link"></span></a>2a. Unix Documentation</h2>
+
+<p>The "doc" subdirectory in this release contains a complete set of
+reference manual entries for Tcl.  Files with extension ".1" are for
+programs (for example, tclsh.1); files with extension ".3" are for C
+library procedures; and files with extension ".n" describe Tcl
+commands.  The file "doc/Tcl.n" gives a quick summary of the Tcl
+language syntax.  To print any of the man pages on Unix, cd to the
+"doc" directory and invoke your favorite variant of troff using the
+normal -man macros, for example</p>
+
+<pre><code>    ditroff -man Tcl.n
+</code></pre>
+
+<p>to print Tcl.n.  If Tcl has been installed correctly and your "man" program
+supports it, you should be able to access the Tcl manual entries using the
+normal "man" mechanisms, such as</p>
+
+<pre><code>    man Tcl
+</code></pre>
+
+<h2>
+<a name="2b-windows-documentation" class="anchor" href="#2b-windows-documentation"><span class="octicon octicon-link"></span></a>2b. Windows Documentation</h2>
+
+<p>The "doc" subdirectory in this release contains a complete set of Windows
+help files for Tcl.  Once you install this Tcl release, a shortcut to the
+Windows help Tcl documentation will appear in the "Start" menu:</p>
+
+<pre><code>Start | Programs | Tcl | Tcl Help
+</code></pre>
+
+<h2>
+<a name="3-compiling-and-installing-tcl" class="anchor" href="#3-compiling-and-installing-tcl"><span class="octicon octicon-link"></span></a>3. Compiling and installing Tcl</h2>
+
+<p>There are brief notes in the unix/README, win/README, and macosx/README about
+compiling on these different platforms.  There is additional information
+about building Tcl from sources at</p>
+
+<pre><code>http://www.tcl.tk/doc/howto/compile.html
+</code></pre>
+
+<h2>
+<a name="4-development-tools" class="anchor" href="#4-development-tools"><span class="octicon octicon-link"></span></a>4. Development tools</h2>
+
+<p>ActiveState produces a high quality set of commercial quality development
+tools that is available to accelerate your Tcl application development.
+Tcl Dev Kit builds on the earlier TclPro toolset and provides a debugger,
+static code checker, single-file wrapping utility, bytecode compiler and
+more.  More information can be found at</p>
+
+<pre><code>http://www.ActiveState.com/Tcl
+</code></pre>
+
+<h2>
+<a name="5-tcl-newsgroup" class="anchor" href="#5-tcl-newsgroup"><span class="octicon octicon-link"></span></a>5. Tcl newsgroup</h2>
+
+<p>There is a USENET news group, "comp.lang.tcl", intended for the exchange of
+information about Tcl, Tk, and related applications.  The newsgroup is a
+great place to ask general information questions.  For bug reports, please
+see the "Support and bug fixes" section below.</p>
+
+<h2>
+<a name="6-tclers-wiki" class="anchor" href="#6-tclers-wiki"><span class="octicon octicon-link"></span></a>6. Tcl'ers Wiki</h2>
+
+<p>A Wiki-based open community site covering all aspects of Tcl/Tk is at:</p>
+
+<pre><code>http://wiki.tcl.tk/
+</code></pre>
+
+<p>It is dedicated to the Tcl programming language and its extensions.  A
+wealth of useful information can be found there.  It contains code
+snippets, references to papers, books, and FAQs, as well as pointers to
+development tools, extensions, and applications.  You can also recommend
+additional URLs by editing the wiki yourself.</p>
+
+<h2>
+<a name="7-mailing-lists" class="anchor" href="#7-mailing-lists"><span class="octicon octicon-link"></span></a>7. Mailing lists</h2>
+
+<p>Several mailing lists are hosted at SourceForge to discuss development or
+use issues (like Macintosh and Windows topics).  For more information and
+to subscribe, visit:</p>
+
+<pre><code>http://sourceforge.net/projects/tcl/
+</code></pre>
+
+<p>and go to the Mailing Lists page.</p>
+
+<h2>
+<a name="8-support-and-training" class="anchor" href="#8-support-and-training"><span class="octicon octicon-link"></span></a>8. Support and Training</h2>
+
+<p>We are very interested in receiving bug reports, patches, and suggestions
+for improvements.  We prefer that you send this information to us via the
+bug form at SourceForge, rather than emailing us directly.  The bug
+database is at:</p>
+
+<pre><code>http://tcl.sourceforge.net/
+</code></pre>
+
+<p>The bug form was designed to give uniform structure to bug reports as
+well as to solicit enough information to minimize followup questions.</p>
+
+<p>We will log and follow-up on each bug, although we cannot promise a
+specific turn-around time.  Enhancements, reported via the Feature
+Requests form at the same web site, may take longer and may not happen
+at all unless there is widespread support for them (we're trying to
+slow the rate at which Tcl/Tk turns into a kitchen sink).  It's very
+difficult to make incompatible changes to Tcl/Tk at this point, due to
+the size of the installed base.</p>
+
+<p>The Tcl community is too large for us to provide much individual support
+for users.  If you need help we suggest that you post questions to
+comp.lang.tcl.  We read the newsgroup and will attempt to answer esoteric
+questions for which no one else is likely to know the answer.  In addition,
+see the following Web site for links to other organizations that offer
+Tcl/Tk training:</p>
+
+<pre><code>http://wiki.tcl.tk/training
+</code></pre>
+
+<h2>
+<a name="9-tracking-development" class="anchor" href="#9-tracking-development"><span class="octicon octicon-link"></span></a>9. Tracking Development</h2>
+
+<p>Tcl is developed in public.  To keep an eye on how Tcl is changing, see
+    <a href="http://core.tcl.tk/">http://core.tcl.tk/</a></p>
+
+<h2>
+<a name="10-thank-you" class="anchor" href="#10-thank-you"><span class="octicon octicon-link"></span></a>10. Thank You</h2>
+
+<p>We'd like to express our thanks to the Tcl community for all the
+helpful suggestions, bug reports, and patches we have received.
+Tcl/Tk has improved vastly and will continue to do so with your help.</p>
+        </section>
+
+        <footer>
+          Tcl8 is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
